@@ -1,0 +1,68 @@
+<html>
+<head>
+</head>
+<body>
+
+</body>
+</html>
+
+<script type="text/javascript">
+function thousand(){
+
+	var arrayThumb = Array();
+	var arrayThumbX = [];
+	var arrayThumbY = Array();
+	var arrayThumbZ = Array();
+
+	var arrayIndex = Array();
+	var arrayIndexX = Array();
+	var arrayIndexY = Array();
+	var arrayIndexZ = Array();
+
+	var arrayMiddle = Array();
+	var arrayMiddleX = Array();
+	var arrayMiddleY = Array();
+	var arrayMiddleZ = Array();
+
+	var arrayRing = Array();
+	var arrayRingX = Array();
+	var arrayRingY = Array();
+	var arrayRingZ = Array();
+
+	var arrayPinky = Array();
+	var arrayPinkyX = Array();
+	var arrayPinkyY = Array();
+	var arrayPinkyZ = Array();
+
+for(var i=0; i< 1001; i++){
+
+  var io = 0;
+ // for (var j = 0, len2 = hand.fingers.length; j < len2; j++) {  
+    finger = hand.fingers[j]
+    io ++;
+
+    var delta = Leap.vec3.create();
+        Leap.vec3.subtract(delta, hand.palmPosition, finger.dipPosition);
+        
+        arrayThumb.push(delta));
+        arrayIndex.push(delta));
+		arrayMiddle.push(delta));
+		arrayRing.push(delta));
+		arrayPinky.push(delta));
+
+        var iop = io.toString();
+
+       
+
+        document.getElementById("output2").innerHTML += concatJointPosition("finger_space"+io, delta) + "<br>";
+
+        return concatJointPosition("finger_space"+io, delta);
+
+
+   //   }
+  }
+  console.log(arrayPinky.toString());
+
+}
+
+</script>
